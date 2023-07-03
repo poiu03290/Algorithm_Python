@@ -6,6 +6,7 @@ n = int(input())
 board = [list(map(int, input().split())) for _ in range(n)]
 cnt = 0
 Q = deque()
+
 for i in range(n):
     for j in range(n):
         if board[i][j] == 1:
@@ -20,5 +21,5 @@ for i in range(n):
                         board[x][y] = 0
                         Q.append((x, y))
             cnt += 1
-            
+
 print(cnt)
